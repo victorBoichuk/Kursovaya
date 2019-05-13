@@ -27,14 +27,23 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    databaseconection.cpp
+    databaseconection.cpp \
+    add.cpp \
+    patients.cpp \
+    doctors.cpp
 
 HEADERS += \
         mainwindow.h \
-    databaseconection.h
+    databaseconection.h \
+    add.h \
+    patients.h \
+    doctors.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    add.ui \
+    patients.ui \
+    doctors.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

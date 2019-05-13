@@ -20,6 +20,117 @@ background:#ffffff;
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_20">
+    <item row="0" column="2">
+     <widget class="QFrame" name="frame_20">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_18">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="font">
+          <font>
+           <family>Verdana</family>
+           <pointsize>8</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+  background-color: #fa7014;
+  color: white; 
+ border-style: solid;
+  border-color: #fa7014;
+	border-width:4px;
+	border-radius:4px;
+}
+
+QPushButton:hover {
+    background-color: #fb9b5a;
+border-color: #fb9b5a;
+}
+</string>
+         </property>
+         <property name="text">
+          <string> Добавить запись</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="3">
+     <widget class="QTableWidget" name="tableWidget_7">
+      <property name="styleSheet">
+       <string notr="true">QTableWidget:item
+{
+border-style: solid;
+  border-color: #fa7014;
+border-radius:8px;
+border-width:4px;
+background:#fa7014;
+}
+
+QTableWidget
+{
+border-style: none;
+}
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>10</number>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::NoSelection</enum>
+      </property>
+      <property name="textElideMode">
+       <enum>Qt::ElideMiddle</enum>
+      </property>
+      <property name="verticalScrollMode">
+       <enum>QAbstractItemView::ScrollPerPixel</enum>
+      </property>
+      <property name="showGrid">
+       <bool>false</bool>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::SolidLine</enum>
+      </property>
+     </widget>
+    </item>
     <item row="0" column="1">
      <widget class="QFrame" name="frame_19">
       <property name="sizePolicy">
@@ -40,133 +151,29 @@ background:#ffffff;
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QGridLayout" name="gridLayout_19">
-       <item row="1" column="0">
-        <widget class="QDateEdit" name="dateEdit">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>150</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QDateEdit {
-  background-color: #ffffff;
-   color: #fa7014;
-  border-style:none none solid none;
-  font-family:Verdana;
-font-size:10;
-font-weight:bold;
-border-width: 2px;
-border-color:#607e8d;
-}
-
-QLineEdit::hover {
-	border-color:#435863;
-	border-width: 2.5px;
-}
-
-QDateEdit::pressed{
-	border-color:#263238;
-  color: #414747; 
-
-}
-
-QCalendarWidget QToolButton {
-  	height: 30px;
-  	width: 75px;
-  	color: white;
-  	font-size: 24px;
-  	icon-size: 56px, 56px;
-	background:#fa7014;
-  }
-  QCalendarWidget QMenu {
-  	width: 100px;
-  	left: 20px;
-  	color: white;
-  	font-size: 18px;
-  	background-color: #fa7014;
-  }
-  QCalendarWidget QSpinBox { 
-  	width: 150px; 
-  	font-size:24px; 
-  	color: white; 
-  	background-color: #fa7014; 
-  	selection-background-color: #fa7014;
-  	selection-color: #fa7014;
-  }
-  QCalendarWidget QSpinBox::up-button { subcontrol-origin: border;  subcontrol-position: top right;  width:65px; }
-  QCalendarWidget QSpinBox::down-button {subcontrol-origin: border; subcontrol-position: bottom right;  width:65px;}
-  QCalendarWidget QSpinBox::up-arrow { width:56px;  height:56px; }
-  QCalendarWidget QSpinBox::down-arrow { width:56px;  height:56px; }
-   
-  /* header row */
-  QCalendarWidget QWidget { alternate-background-color:#fa7014; }
-   
-  /* normal days */
-  QCalendarWidget QAbstractItemView:enabled 
-  {
-  	font-size:24px;  
-  	color: #fa7014;  
-  	background-color:#fa7014;  
-  	selection-background-color: #fa7014; 
-  	selection-color: #fa7014; 
-  }
-   
-  /* days in other months */
-  /* navigation bar */
-QCalendarWidget QWidget#qt_calendar_navigationbar
-{ 
-background-color:#fa7014; 
-}
-
-QCalendarWidget QAbstractItemView:disabled 
-{ 
-color:#fa7014; 
-}
-
-
-
-
-</string>
-         </property>
-         <property name="dateTime">
-          <datetime>
-           <hour>0</hour>
-           <minute>0</minute>
-           <second>0</second>
-           <year>2000</year>
-           <month>1</month>
-           <day>2</day>
-          </datetime>
-         </property>
-         <property name="calendarPopup">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLineEdit" name="patient">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>150</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QLineEdit {
+      <widget class="QLineEdit" name="patient">
+       <property name="geometry">
+        <rect>
+         <x>39</x>
+         <y>9</y>
+         <width>150</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
   background-color: #ffffff;
    color: #fa7014;
   border-style:none none solid none;
@@ -192,29 +199,296 @@ QLineEdit::pressed{
 
 
 </string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QPushButton" name="pushButton_3">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>150</width>
-           <height>0</height>
-          </size>
-         </property>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>225</x>
+         <y>52</y>
+         <width>150</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Verdana</family>
+         <pointsize>8</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+  background-color: #fa7014;
+  color: white; 
+ border-style: solid;
+  border-color: #fa7014;
+	border-width:4px;
+	border-radius:4px;
+}
+
+QPushButton:hover {
+    background-color: #fb9b5a;
+border-color: #fb9b5a;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Найти</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="cabinet">
+       <property name="geometry">
+        <rect>
+         <x>411</x>
+         <y>9</y>
+         <width>150</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+  background-color: #ffffff;
+   color: #fa7014;
+  border-style:none none solid none;
+  font-family:Verdana;
+font-size:10;
+font-weight:bold;
+border-width: 2px;
+border-color:#607e8d;
+}
+
+QLineEdit::hover {
+	border-color:#435863;
+	border-width: 2.5px;
+}
+
+QLineEdit::pressed{
+	border-color:#263238;
+  color: #414747; 
+
+}
+
+
+
+
+</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>411</x>
+         <y>52</y>
+         <width>150</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Verdana</family>
+         <pointsize>8</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+  background-color: #fa7014;
+  color: white; 
+ border-style: solid;
+  border-color: #fa7014;
+	border-width:4px;
+	border-radius:4px;
+}
+
+QPushButton:hover {
+    background-color: #fb9b5a;
+border-color: #fb9b5a;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Очистить</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="doctor">
+       <property name="geometry">
+        <rect>
+         <x>225</x>
+         <y>9</y>
+         <width>150</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+  background-color: #ffffff;
+   color: #fa7014;
+  border-style:none none solid none;
+  font-family:Verdana;
+font-size:10;
+font-weight:bold;
+border-width: 2px;
+border-color:#607e8d;
+}
+
+QLineEdit::hover {
+	border-color:#435863;
+	border-width: 2.5px;
+}
+
+QLineEdit::pressed{
+	border-color:#263238;
+  color: #414747; 
+
+}
+
+
+
+
+</string>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="dateEdit">
+       <property name="geometry">
+        <rect>
+         <x>39</x>
+         <y>52</y>
+         <width>151</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QDateEdit {
+  background-color: #ffffff;
+   color: #fa7014;
+  border-style:none none solid none;
+  font-family:Verdana;
+font-size:10;
+font-weight:bold;
+border-width: 2px;
+border-color:#607e8d;
+}
+
+</string>
+       </property>
+       <property name="displayFormat">
+        <string>yyyy-MM-dd</string>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>45</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+  border: medium none;
+  background-image: none; 
+  background: transparent;
+  float: left;
+  background-color: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <zorder>dateEdit</zorder>
+      <zorder>patient</zorder>
+      <zorder>pushButton_3</zorder>
+      <zorder>cabinet</zorder>
+      <zorder>pushButton_4</zorder>
+      <zorder>doctor</zorder>
+      <zorder>pushButton_6</zorder>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QFrame" name="frame_9">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_8">
+       <item row="3" column="0">
+        <widget class="QPushButton" name="pushButton">
          <property name="font">
           <font>
            <family>Verdana</family>
            <pointsize>8</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
+           <weight>50</weight>
+           <bold>false</bold>
           </font>
          </property>
          <property name="styleSheet">
@@ -234,74 +508,36 @@ border-color: #fb9b5a;
 </string>
          </property>
          <property name="text">
-          <string>Найти</string>
+          <string>&lt;</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="2">
-        <widget class="QLineEdit" name="cabinet">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>150</width>
-           <height>0</height>
-          </size>
-         </property>
+       <item row="2" column="0" colspan="2">
+        <widget class="QLabel" name="label_2">
          <property name="styleSheet">
-          <string notr="true">QLineEdit {
-  background-color: #ffffff;
-   color: #fa7014;
-  border-style:none none solid none;
+          <string notr="true">QLabel {
+  color: #414747; 
+  border-style:nonet;
   font-family:Verdana;
+    text-align:  center;
 font-size:10;
 font-weight:bold;
-border-width: 2px;
-border-color:#607e8d;
-}
 
-QLineEdit::hover {
-	border-color:#435863;
-	border-width: 2.5px;
-}
-
-QLineEdit::pressed{
-	border-color:#263238;
-  color: #414747; 
-
-}
-
-
-
-
-</string>
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
-       <item row="1" column="2">
-        <widget class="QPushButton" name="pushButton_4">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>150</width>
-           <height>0</height>
-          </size>
-         </property>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="pushButton_2">
          <property name="font">
           <font>
            <family>Verdana</family>
-           <pointsize>8</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
           </font>
          </property>
          <property name="styleSheet">
@@ -321,58 +557,35 @@ border-color: #fb9b5a;
 </string>
          </property>
          <property name="text">
-          <string>Очистить</string>
+          <string>&gt;</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="doctor">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>150</width>
-           <height>0</height>
-          </size>
-         </property>
+       <item row="0" column="0" colspan="2">
+        <widget class="QLabel" name="label">
          <property name="styleSheet">
-          <string notr="true">QLineEdit {
-  background-color: #ffffff;
-   color: #fa7014;
-  border-style:none none solid none;
+          <string notr="true">QLabel {
+  color: #414747; 
+  border-style:nonet;
   font-family:Verdana;
+    text-align:  center;
 font-size:10;
 font-weight:bold;
-border-width: 2px;
-border-color:#607e8d;
-}
 
-QLineEdit::hover {
-	border-color:#435863;
-	border-width: 2.5px;
-}
-
-QLineEdit::pressed{
-	border-color:#263238;
-  color: #414747; 
-
-}
-
-
-
-
-</string>
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
       </layout>
      </widget>
     </item>
-    <item row="2" column="0" colspan="3">
+    <item row="3" column="0" colspan="3">
      <widget class="QFrame" name="frame_18">
       <property name="enabled">
        <bool>true</bool>
@@ -1135,6 +1348,18 @@ border-style: none;
                <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
                </property>
+               <property name="lineWidth">
+                <number>0</number>
+               </property>
+               <property name="editTriggers">
+                <set>QAbstractItemView::NoEditTriggers</set>
+               </property>
+               <property name="tabKeyNavigation">
+                <bool>false</bool>
+               </property>
+               <property name="selectionMode">
+                <enum>QAbstractItemView::NoSelection</enum>
+               </property>
                <property name="gridStyle">
                 <enum>Qt::NoPen</enum>
                </property>
@@ -1183,6 +1408,18 @@ border-style: none;
                </property>
                <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="lineWidth">
+                <number>0</number>
+               </property>
+               <property name="editTriggers">
+                <set>QAbstractItemView::NoEditTriggers</set>
+               </property>
+               <property name="tabKeyNavigation">
+                <bool>false</bool>
+               </property>
+               <property name="selectionMode">
+                <enum>QAbstractItemView::NoSelection</enum>
                </property>
                <property name="showGrid">
                 <bool>false</bool>
@@ -1239,6 +1476,18 @@ border-style: none;
                <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
                </property>
+               <property name="lineWidth">
+                <number>0</number>
+               </property>
+               <property name="editTriggers">
+                <set>QAbstractItemView::NoEditTriggers</set>
+               </property>
+               <property name="tabKeyNavigation">
+                <bool>false</bool>
+               </property>
+               <property name="selectionMode">
+                <enum>QAbstractItemView::NoSelection</enum>
+               </property>
                <property name="gridStyle">
                 <enum>Qt::NoPen</enum>
                </property>
@@ -1288,6 +1537,18 @@ border-style: none;
                <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
                </property>
+               <property name="lineWidth">
+                <number>0</number>
+               </property>
+               <property name="editTriggers">
+                <set>QAbstractItemView::NoEditTriggers</set>
+               </property>
+               <property name="tabKeyNavigation">
+                <bool>false</bool>
+               </property>
+               <property name="selectionMode">
+                <enum>QAbstractItemView::NoSelection</enum>
+               </property>
                <property name="gridStyle">
                 <enum>Qt::NoPen</enum>
                </property>
@@ -1336,6 +1597,18 @@ border-style: none;
                </property>
                <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="lineWidth">
+                <number>0</number>
+               </property>
+               <property name="editTriggers">
+                <set>QAbstractItemView::NoEditTriggers</set>
+               </property>
+               <property name="tabKeyNavigation">
+                <bool>false</bool>
+               </property>
+               <property name="selectionMode">
+                <enum>QAbstractItemView::NoSelection</enum>
                </property>
                <property name="gridStyle">
                 <enum>Qt::NoPen</enum>
@@ -1390,6 +1663,18 @@ border-style: none;
                <property name="frameShadow">
                 <enum>QFrame::Plain</enum>
                </property>
+               <property name="lineWidth">
+                <number>0</number>
+               </property>
+               <property name="editTriggers">
+                <set>QAbstractItemView::NoEditTriggers</set>
+               </property>
+               <property name="tabKeyNavigation">
+                <bool>false</bool>
+               </property>
+               <property name="selectionMode">
+                <enum>QAbstractItemView::NoSelection</enum>
+               </property>
                <property name="gridStyle">
                 <enum>Qt::NoPen</enum>
                </property>
@@ -1404,202 +1689,18 @@ border-style: none;
       </layout>
      </widget>
     </item>
-    <item row="0" column="0">
-     <widget class="QFrame" name="frame_9">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>300</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_8">
-       <item row="0" column="0" colspan="2">
-        <widget class="QLabel" name="label">
-         <property name="styleSheet">
-          <string notr="true">QLabel {
-  color: #414747; 
-  border-style:nonet;
-  font-family:Verdana;
-    text-align:  center;
-font-size:10;
-font-weight:bold;
-
-}</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0" colspan="2">
-        <widget class="QLabel" name="label_2">
-         <property name="styleSheet">
-          <string notr="true">QLabel {
-  color: #414747; 
-  border-style:nonet;
-  font-family:Verdana;
-    text-align:  center;
-font-size:10;
-font-weight:bold;
-
-}</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QPushButton" name="pushButton">
-         <property name="font">
-          <font>
-           <family>Verdana</family>
-           <pointsize>8</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton {
-  background-color: #fa7014;
-  color: white; 
- border-style: solid;
-  border-color: #fa7014;
-	border-width:4px;
-	border-radius:4px;
-}
-
-QPushButton:hover {
-    background-color: #fb9b5a;
-border-color: #fb9b5a;
-}
-</string>
-         </property>
-         <property name="text">
-          <string>&lt;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QPushButton" name="pushButton_2">
-         <property name="font">
-          <font>
-           <family>Verdana</family>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton {
-  background-color: #fa7014;
-  color: white; 
- border-style: solid;
-  border-color: #fa7014;
-	border-width:4px;
-	border-radius:4px;
-}
-
-QPushButton:hover {
-    background-color: #fb9b5a;
-border-color: #fb9b5a;
-}
-</string>
-         </property>
-         <property name="text">
-          <string>&gt;</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="0" column="2">
-     <widget class="QFrame" name="frame_20">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>150</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_18">
-       <item row="0" column="0">
-        <widget class="QPushButton" name="pushButton_5">
-         <property name="font">
-          <font>
-           <family>Verdana</family>
-           <pointsize>8</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton {
-  background-color: #fa7014;
-  color: white; 
- border-style: solid;
-  border-color: #fa7014;
-	border-width:4px;
-	border-radius:4px;
-}
-
-QPushButton:hover {
-    background-color: #fb9b5a;
-border-color: #fb9b5a;
-}
-</string>
-         </property>
-         <property name="text">
-          <string>Добавить</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
     <item row="1" column="0" colspan="3">
-     <widget class="QTableWidget" name="tableWidget_7">
+     <widget class="QTableView" name="tableView">
       <property name="styleSheet">
-       <string notr="true">QTableWidget:item
+       <string notr="true">QTableView
 {
-border-style: solid;
-  border-color: #fa7014;
-border-radius:8px;
-border-width:4px;
-background:#fa7014;
+text-align: center;
 }
 
-QTableWidget
-{
-border-style: none;
-}
+QTableView::item:selected:active {
+                    background: rgb(0, 0,0);
+                    selection-color: #ffffff;
+                    }
 </string>
       </property>
       <property name="frameShape">
@@ -1611,17 +1712,8 @@ border-style: none;
       <property name="horizontalScrollBarPolicy">
        <enum>Qt::ScrollBarAlwaysOff</enum>
       </property>
-      <property name="sizeAdjustPolicy">
-       <enum>QAbstractScrollArea::AdjustToContents</enum>
-      </property>
-      <property name="verticalScrollMode">
-       <enum>QAbstractItemView::ScrollPerPixel</enum>
-      </property>
-      <property name="showGrid">
-       <bool>false</bool>
-      </property>
       <property name="gridStyle">
-       <enum>Qt::NoPen</enum>
+       <enum>Qt::SolidLine</enum>
       </property>
      </widget>
     </item>
@@ -1639,19 +1731,39 @@ border-style: none;
      <height>20</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
    <widget class="QMenu" name="menuhello">
     <property name="title">
      <string>Действие</string>
     </property>
     <widget class="QMenu" name="menu_2">
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>8</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
      <property name="title">
       <string>Вывести список</string>
      </property>
      <addaction name="action_5"/>
      <addaction name="action_6"/>
      <addaction name="action_7"/>
+     <addaction name="action"/>
     </widget>
     <widget class="QMenu" name="menu_3">
+     <property name="font">
+      <font>
+       <family>Verdana</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
      <property name="title">
       <string>Поиск</string>
      </property>
@@ -1676,45 +1788,119 @@ border-style: none;
    <property name="text">
     <string>Список кабинетов</string>
    </property>
+   <property name="font">
+    <font>
+     <family>Verdana</family>
+    </font>
+   </property>
   </action>
   <action name="action_3">
    <property name="text">
     <string>Расписание</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
    </property>
   </action>
   <action name="action_4">
    <property name="text">
     <string>Список пациентов</string>
    </property>
+   <property name="font">
+    <font>
+     <family>Verdana</family>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
   </action>
   <action name="action_5">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="fusion">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
    <property name="text">
     <string>Список врачей</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
    </property>
   </action>
   <action name="action_6">
    <property name="text">
     <string>Список пациентов</string>
    </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <italic>false</italic>
+    </font>
+   </property>
   </action>
   <action name="action_7">
    <property name="text">
     <string>Список кабинетов</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
    </property>
   </action>
   <action name="action_11">
    <property name="text">
     <string>Добавить...</string>
    </property>
+   <property name="font">
+    <font>
+     <family>Verdana</family>
+    </font>
+   </property>
   </action>
   <action name="action_12">
    <property name="text">
     <string>Найти пациента</string>
    </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
   </action>
   <action name="action_13">
    <property name="text">
     <string>Найти врача</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+    </font>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>Список специальностей</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
    </property>
   </action>
  </widget>
