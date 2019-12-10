@@ -1,2 +1,2 @@
 # Kursovaya
-Kursovaya
+KursovayaSUBD
